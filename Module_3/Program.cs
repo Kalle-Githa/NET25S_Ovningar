@@ -3,6 +3,7 @@
 // var m = new Medelande { Text = Console.ReadLine() };
 // Console.WriteLine(m.VisaMedelande());
 var kurs = new Kurs { };
+Console.WriteLine("");
 
 Console.WriteLine("Ange Kursens namn");
 kurs.KursNamn = Console.ReadLine();
