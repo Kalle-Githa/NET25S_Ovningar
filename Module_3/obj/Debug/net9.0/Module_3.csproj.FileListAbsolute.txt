@@ -1,0 +1,14 @@
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\obj\Debug\net9.0\Module_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\obj\Debug\net9.0\Module_3.AssemblyInfoInputs.cache
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\obj\Debug\net9.0\Module_3.AssemblyInfo.cs
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\obj\Debug\net9.0\Module_3.csproj.CoreCompileInputs.cache
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\bin\Debug\net9.0\Module_3.exe
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\bin\Debug\net9.0\Module_3.deps.json
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\bin\Debug\net9.0\Module_3.runtimeconfig.json
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\bin\Debug\net9.0\Module_3.dll
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\bin\Debug\net9.0\Module_3.pdb
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\obj\Debug\net9.0\Module_3.dll
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\obj\Debug\net9.0\refint\Module_3.dll
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\obj\Debug\net9.0\Module_3.pdb
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\obj\Debug\net9.0\Module_3.genruntimeconfig.cache
+C:\Users\minpo\Documents\#.NetUtbildningen2025\Övningar\Module_3\obj\Debug\net9.0\ref\Module_3.dll
