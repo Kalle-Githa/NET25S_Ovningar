@@ -37,13 +37,35 @@ public class Student
 
     public string HamtaBetyg()
     {
-        List<string> betygProgrammering = ["Programmering C#", "G"];
-        List<string> betygDatabaser = ["Databasteknik", "VG"];
-        List<string> betygWebbutveckling = ["Webbutveckling", "IG"];
-        return $"{betygProgrammering[0]}: {betygProgrammering[1]}\n{betygDatabaser[0]}: {betygDatabaser[1]}\n{betygWebbutveckling[0]}: {betygWebbutveckling[1]}";
+        var betygLists = new List<(string kurs, string betyg)>
+        {
+            ("Programmering C#", "G"),
+            ("Databasteknik", "VG"),
+            ("Webbutveckling", "IG"),
+        };
+        string resultat = "";
+
+        foreach (var (k, b) in betygLists)
+        {
+            resultat += $"Kurs: {k}, Betyg: {b}\n";
+        }
+        return resultat;
     }
 
-    // public override string ToString()
+    public void RensaUppgifter()
+    {
+        Förnamn = "";
+        Efternamn = "";
+        Email = "";
+        Telefonnummer = "";
+    }
+
+    public string SammanFattning()
+    {
+        return $"{Förnamn}, {Efternamn}, {Email}, {Telefonnummer}";
+    }
+
+    // public override string ToString()// detta är samma metod som SammanFattning
     // {
     //     return $"{Förnamn}, {Efternamn}, {Email}, {Telefonnummer}";
     // }

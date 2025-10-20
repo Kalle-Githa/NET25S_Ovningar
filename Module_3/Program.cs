@@ -23,25 +23,49 @@
 //     $"Kurs info: Kursnamn = {kurs.KursNamn}, startdatum = {kurs.StartDatum} slutdatum = {kurs.SlutDatum} Poäng = {kurs.Poäng} Antal dagar {kurs.BeraknaAntalKursDagar()} Poäng/kursdag{kurs.PoangPerKursdag()}"
 // );
 
-// Console.WriteLine("Skriv in vädrden för en student");
-// Console.WriteLine("Namn");
+Console.WriteLine("Skriv in vädrden för en student");
+Console.WriteLine("Namn");
 
-// string namn = Console.ReadLine();
+string namn = Console.ReadLine();
 
-// Console.WriteLine("Efternamn");
-// string efternamn = Console.ReadLine();
-// Console.WriteLine("Email");
-// string email = Console.ReadLine();
-// Console.WriteLine("Telefonnummer");
-// string telefonnummer = Console.ReadLine();
+Console.WriteLine("Efternamn");
+string efternamn = Console.ReadLine();
+Console.WriteLine("Email");
+string email = Console.ReadLine();
+Console.WriteLine("Telefonnummer");
+string telefonnummer = Console.ReadLine();
 
-// var nyStudent = new Student(namn, efternamn, email, telefonnummer);
+var nyStudent = new Student(namn, efternamn, email, telefonnummer);
 
-// Console.WriteLine(nyStudent.KontroleraVarder());
+Console.WriteLine(nyStudent.KontroleraVarder());
+Console.WriteLine(nyStudent.SammanFattning());
 
-// // Console.WriteLine(nyStudent.KontroleraVarder()); // Detta är lärares sätt att göra det på
+// Console.WriteLine(nyStudent.KontroleraVarder()); // Detta är lärares sätt att göra det på
 // Console.WriteLine(
 //     $"{nyStudent.Förnamn}, {nyStudent.Efternamn}, {nyStudent.Email}, {nyStudent.Telefonnummer}"
 // );
 
 // //========== Övning 6 ================
+
+Console.WriteLine(nyStudent.HamtaBetyg());
+Console.WriteLine("Vill du rensa alla värden? j/n");
+
+string svar = Console.ReadLine()!.ToLower();
+if (svar == "j")
+{
+    nyStudent.RensaUppgifter();
+    Console.WriteLine(
+        $"{nyStudent.Förnamn}, {nyStudent.Efternamn}, {nyStudent.Email}, {nyStudent.Telefonnummer}"
+    );
+}
+var lärare = new Larare { Namn = "anna", Email = "gmail" };
+
+Console.WriteLine(lärare.SammanFattning());
+
+foreach (var k in lärare.AnsvarigForKurser())
+{
+    Console.WriteLine(k);
+}
+
+// Console.WriteLine("Detta är kurserna: ");
+// Console.WriteLine(lärare.AnsvarigForKurser());
