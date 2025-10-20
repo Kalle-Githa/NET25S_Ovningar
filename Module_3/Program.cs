@@ -23,6 +23,8 @@
 //     $"Kurs info: Kursnamn = {kurs.KursNamn}, startdatum = {kurs.StartDatum} slutdatum = {kurs.SlutDatum} Poäng = {kurs.Poäng} Antal dagar {kurs.BeraknaAntalKursDagar()} Poäng/kursdag{kurs.PoangPerKursdag()}"
 // );
 
+using System.Runtime.InteropServices;
+
 Console.WriteLine("Skriv in vädrden för en student");
 Console.WriteLine("Namn");
 
@@ -67,8 +69,9 @@ foreach (var k in lärare.AnsvarigForKurser())
     Console.WriteLine(k);
 }
 
-Console.WriteLine("Sätt alla propertys ");
+Console.WriteLine("Sätt alla propertys för en lektion ");
 var lektion = new Lektion();
+Klassrum klassrum = new Klassrum();
 Console.Write("Datum: ");
 DateTime.TryParse(Console.ReadLine(), out var datum);
 lektion.Datum = datum;
@@ -79,6 +82,13 @@ Console.Write("Klassrum: ");
 lektion.Klassrum = Console.ReadLine();
 lektion.Boka();
 lektion.TaBort();
+klassrum.Lektioner.Add(lektion);
 
+foreach (var l in klassrum.HamtaLektioner())
+{
+    Console.WriteLine($"{l.Kurs}, {l.Datum}, {l.Klassrum}");
+}
+
+klassrum.KontrolleraLedigt(lektion.Datum);
 // Console.WriteLine("Detta är kurserna: ");
 // Console.WriteLine(lärare.AnsvarigForKurser());
