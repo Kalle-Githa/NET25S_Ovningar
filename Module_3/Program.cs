@@ -67,5 +67,18 @@ foreach (var k in lärare.AnsvarigForKurser())
     Console.WriteLine(k);
 }
 
+Console.WriteLine("Sätt alla propertys ");
+var lektion = new Lektion();
+Console.Write("Datum: ");
+DateTime.TryParse(Console.ReadLine(), out var datum);
+lektion.Datum = datum;
+
+Console.Write("Kurs:");
+lektion.Kurs = Console.ReadLine();
+Console.Write("Klassrum: ");
+lektion.Klassrum = Console.ReadLine();
+lektion.Boka();
+lektion.TaBort();
+
 // Console.WriteLine("Detta är kurserna: ");
 // Console.WriteLine(lärare.AnsvarigForKurser());
