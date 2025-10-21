@@ -69,26 +69,62 @@ foreach (var k in lärare.AnsvarigForKurser())
     Console.WriteLine(k);
 }
 
-Console.WriteLine("Sätt alla propertys för en lektion ");
-var lektion = new Lektion();
+Console.WriteLine("Sätt alla propertys för  lektion nr 1 ");
+var lektion1 = new Lektion();
 Klassrum klassrum = new Klassrum();
 Console.Write("Datum: ");
 DateTime.TryParse(Console.ReadLine(), out var datum);
-lektion.Datum = datum;
+lektion1.Datum = datum;
 
 Console.Write("Kurs:");
-lektion.Kurs = Console.ReadLine();
+lektion1.Kurs = Console.ReadLine();
 Console.Write("Klassrum: ");
-lektion.Klassrum = Console.ReadLine();
-lektion.Boka();
-lektion.TaBort();
-klassrum.Lektioner.Add(lektion);
+lektion1.Klassrum = Console.ReadLine();
+lektion1.Boka();
+lektion1.TaBort();
+klassrum.Lektioner.Add(lektion1);
+
+//____________________________________________________________
+
+Console.WriteLine("Sätt alla propertys för lektion nr 2 ");
+var lektion2 = new Lektion();
+Console.Write("Datum: ");
+DateTime.TryParse(Console.ReadLine(), out var datum2);
+lektion2.Datum = datum2;
+
+Console.Write("Kurs:");
+lektion2.Kurs = Console.ReadLine();
+Console.Write("Klassrum: ");
+lektion2.Klassrum = Console.ReadLine();
+lektion2.Boka();
+lektion2.TaBort();
+
+bool ledigt = klassrum.KontrolleraLedigt(lektion2.Datum);
+
+Console.WriteLine($"Metoden returnerade: {ledigt}");
+if (ledigt)
+    Console.WriteLine("Ledigt");
+else
+    Console.WriteLine("Upptaget");
+
+klassrum.Lektioner.Add(lektion2);
 
 foreach (var l in klassrum.HamtaLektioner())
 {
     Console.WriteLine($"{l.Kurs}, {l.Datum}, {l.Klassrum}");
 }
 
-klassrum.KontrolleraLedigt(lektion.Datum);
-// Console.WriteLine("Detta är kurserna: ");
+Console.WriteLine($"Jämför {lektion2.Datum:d} med {lektion1.Datum:d}");
+
+
+// if (klassrum.KontrolleraLedigt(lektion2.Datum))
+// {
+//     Console.WriteLine("Ledigt");
+// }
+// else
+// {
+//     Console.WriteLine("Upptaget");
+// }
+
+/// Console.WriteLine("Detta är kurserna: ");
 // Console.WriteLine(lärare.AnsvarigForKurser());
